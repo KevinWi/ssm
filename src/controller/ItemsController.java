@@ -14,7 +14,7 @@ import service.ItemsService;
 public class ItemsController {
 	@Autowired
 	private ItemsService itemsService;
-	@RequestMapping("/list")
+	@RequestMapping(value = "/list")
 	public ModelAndView list() throws Exception{
 		List<Items> list = itemsService.list();
 		ModelAndView modelAndView = new ModelAndView();
